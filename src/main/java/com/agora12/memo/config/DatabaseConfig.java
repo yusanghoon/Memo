@@ -20,7 +20,7 @@ public class DatabaseConfig {
 		SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
 		sessionFactory.setDataSource(dataSource);
 		
-		Resource[] res = new PathMatchingResourcePatternResolver().getResources("classpath:mappers/Mapper.xml");
+		Resource[] res = new PathMatchingResourcePatternResolver().getResources("classpath:mappers/*Mapper.xml");
 		sessionFactory.setMapperLocations(res);
 		
 		return sessionFactory.getObject();

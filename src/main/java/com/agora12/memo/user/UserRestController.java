@@ -17,7 +17,7 @@ public class UserRestController {
 	private UserBO userBO;
 	
 	//회원가입 API
-	@PostMapping("/user/signup")
+	@PostMapping("/")
 	public Map<String, String> signup(
 			@RequestParam("loginId") String loginId
 			, @RequestParam("password") String password
